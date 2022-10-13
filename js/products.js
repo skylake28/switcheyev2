@@ -869,26 +869,26 @@ const productsHickvision = [
 
 //close shopping cart modal (usually x button) with a class of producstOnCart
 //remves stopScrolling class
-function closeCart() {
-	const cart = document.querySelector('.productsCart-container');
-	cart.classList.toggle('hide');
-    document.querySelector('body').classList.toggle('stopScrolling');
-}
+// function closeCart() {
+// 	const cart = document.querySelector('.productsCart-container');
+// 	cart.classList.toggle('hide');
+//     document.querySelector('body').classList.toggle('stopScrolling');
+// }
 
 //open shopping cart modal using shopping cart logo with a class of shoppingCartButton
 //Make user unable to scroll using class stopScrolling
-const openShopCart = document.querySelector('.cart');
-openShopCart.addEventListener('click', () => {
-	const cart = document.querySelector('.productsCart-container');
-	cart.classList.toggle('hide');
-	window.scrollTo(0, 0);
-	document.querySelector('body').classList.toggle('stopScrolling');
-	updateShoppingCartHTML();
-});
+// const openShopCart = document.querySelector('.cart');
+// openShopCart.addEventListener('click', () => {
+// 	const cart = document.querySelector('.productsCart-container');
+// 	cart.classList.toggle('hide');
+// 	window.scrollTo(0, 0);
+// 	document.querySelector('body').classList.toggle('stopScrolling');
+// 	updateShoppingCartHTML();
+// });
 
 //close shopping cart using closebutton
-const closeShopCart = document.querySelector('#closeButton');
-closeShopCart.addEventListener('click', closeCart);
+// const closeShopCart = document.querySelector('#closeButton');
+// closeShopCart.addEventListener('click', closeCart);
 
 const parentElement = document.querySelector('.hikProducts');
 const parentElement2 = document.querySelector('.detailedProducts');//fro detailed products related products
@@ -1143,4 +1143,3 @@ const appendPageNumber = (index) => {
       }
     });
   };
-
