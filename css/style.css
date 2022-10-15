@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Rubik&display=swap');
+
 body{
   padding-top:175px;
 
@@ -35,16 +38,12 @@ body{
   .carousel-item h1, p{
     color:#fff;
   }
-
-
-
-
-
-
-
-
-
-
+.culture{
+  background-color: #051242;
+}
+.culture h1{
+ color: #fff !important;
+}
 
   .b-divider {
     height: 2rem;
@@ -56,15 +55,44 @@ body{
 
 
 
-
-
-
-
-
-
-
   .footer{
     min-height: 150px;
     background-color: #051242;
     color: #fff;
+    font-family: 'Merriweather', serif;
 }
+.footer a{
+  font-family: 'Merriweather', serif;
+  font-size:15px !important;
+  color:#fff !important;
+}
+.footer a:hover{
+  color: #03B4E7 !important;
+}
+
+.footer i{
+  margin-right:5px;
+}
+#line {
+  border: 1px solid #49B6FF;
+  width: 50px;
+  margin-top: 10px;
+}
+.accordion-button{
+  background-color: #3D4AC5 !important;
+  color: #fff !important;
+  font-weight: bold;
+  border: none !important;
+}
+.accordion-item{
+  border: none !important;
+  box-shadow: 0 2px 25px 0 rgba(110,130,208, .18);
+}
+.btn-primary{
+  background-color: #2F61D3 !important;
+}
+
+.btn-primary:hover{
+  background-color: #3D4AC5 !important;
+}
+

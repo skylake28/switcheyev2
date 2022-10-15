@@ -9,6 +9,8 @@
     <link href="./css/style.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css" integrity="sha512-csw0Ma4oXCAgd/d4nTcpoEoz4nYvvnk21a8VA2h2dzhPAvjbUIK6V3si7/g/HehwdunqqW18RwCJKpD7rL67Xg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css" integrity="sha512-csw0Ma4oXCAgd/d4nTcpoEoz4nYvvnk21a8VA2h2dzhPAvjbUIK6V3si7/g/HehwdunqqW18RwCJKpD7rL67Xg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <!-- NAV BAR CODES-->
@@ -53,10 +55,8 @@
                 <a class="nav-link hvr-underline-from-center" href="#">Contact Us</a>
               </li>
             </ul>
-            <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
+            <button type="button" class="btn btn-primary btn-lg px-4 gap-3">Shopping Cart</button>
+          
           </div>
         </div>
       </nav>
@@ -78,7 +78,8 @@
                   <p class="lead mb-4">We aim to provide our dealers partners, systems integrators, 
                     and our home, office, and enterprise customers with the most advanced security equipment at the lowest possible prices.</p>
                   <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-                    <button type="button" class="btn btn-primary btn-lg px-4 gap-3">Primary button</button>
+                    <button type="button" class="btn btn-primary btn-lg px-4 gap-3">Our Services</button>
+                    <button type="button" class="btn btn-primary btn-lg px-4 gap-3">Our Products</button>
                   </div>
                 </div>
               </div>
@@ -90,7 +91,8 @@
                 <div class="col-lg-6 mx-auto">
                   <p class="lead mb-4">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
                   <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-                    <button type="button" class="btn btn-primary btn-lg px-4 gap-3">Primary button</button>
+                    <button type="button" class="btn btn-primary btn-lg px-4 gap-3">Our Services</button>
+                    <button type="button" class="btn btn-primary btn-lg px-4 gap-3">Our Products</button>
                   </div>
                 </div>
               </div>
@@ -102,7 +104,8 @@
                 <div class="col-lg-6 mx-auto">
                   <p class="lead mb-4">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
                   <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-                    <button type="button" class="btn btn-primary btn-lg px-4 gap-3">Primary button</button>
+                    <button type="button" class="btn btn-primary btn-lg px-4 gap-3">Our Services</button>
+                    <button type="button" class="btn btn-primary btn-lg px-4 gap-3">Our Products</button>
                   </div>
                 </div>
               </div>
@@ -120,16 +123,87 @@
 
       </div>
       <!-- /Hero -->
+      <!-- Our Culture -->
+      <div class="container-fluid p-5 culture ">
+      <div class="container d-flex">
+        <div class="col-6">
+          <div class="container">
+            <h1 class="display-5 fw-bold lh-1 mb-3">Our Culture</h1>
+            <img src="./img/culture.jpeg" width="450px"/>            
 
+          </div>
+        </div>
+        <div class="col-6">  
+          
+          <div class="accordion" id="CULTUREACCORDION">
+            <div class="accordion-item mt-3">
+              <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  OPEN AND DIRECT
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#CULTUREACCORDION">
+                <div class="accordion-body">
+                  <strong>We always tell the truth. We are transparent and open. We communicate directly and clearly. This is how we do business because it is the key to having a good partnership.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item mt-3">
+              <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  SKILLED
+                </button>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#CULTUREACCORDION">
+                <div class="accordion-body">
+                  <strong>Our highly skilled IT professionals are specialised in Java, PHP, React, Angular, Vue.js, AWS. Clean code, simplicity, code reviews and test automation will gaurantee long term stability and maintanability of your solutions.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item mt-3">
+              <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  SOLUTION DRIVEN
+                </button>
+              </h2>
+              <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#CULTUREACCORDION">
+                <div class="accordion-body">
+                  <strong>We combine our technichal skills with business afinity and a critical mindset to deliver the best possible solution for your business. For us adding value to your business is the ultimate goal.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item mt-3">
+              <h2 class="accordion-header" id="headingFour">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                  TRUSTWORTHY
+                </button>
+              </h2>
+              <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#CULTUREACCORDION">
+                <div class="accordion-body">
+                  <strong>We are always there to help clients with advice and actions. We take responsibility and deliver the best possible solutions. We take ownership, and joy in delivering the best possible solutions.
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+    </div>
+        </div>
+        
+  
+       <!-- /Our Culture -->
       <!--  CTA  -->
       <div class="container my-5">
         <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg">
           <div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
             <h1 class="display-4 fw-bold lh-1">Trusted Effective Service and Solutions</h1>
-            <p class="lead">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
+            <p class="lead text-muted">While our teams facilitate the best IT solution for your company, we make sure your experience is hassle-free.</p>
             <div class="d-grid gap-2 d-md-flex justify-content-md-start mb-4 mb-lg-3">
-              <button type="button" class="btn btn-primary btn-lg px-4 me-md-2 fw-bold">Primary</button>
-              <button type="button" class="btn btn-outline-secondary btn-lg px-4">Default</button>
+              <button type="button" class="btn btn-primary btn-lg px-5 me-md-3 fw-bold">Our Services</button>
+              <button type="button" class="btn btn-danger btn-lg px-5 me-md-3 fw-bold">Our Products</button>
             </div>
           </div>
           <div class="col-lg-4 offset-lg-1 p-0 overflow-hidden shadow-lg">
@@ -149,47 +223,44 @@
 <div class="container">
   <footer class="py-5">
     <div class="row">
-        <div class="col-md-5 offset-md-1 mb-3">
-            <form>
-              <h5>Subscribe to our newsletter</h5>
-              <p>Monthly digest of what's new and exciting from us.</p>
-              <div class="d-flex flex-column flex-sm-row w-100 gap-2">
-                <label for="newsletter1" class="visually-hidden">Email address</label>
-                <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
-                <button class="btn btn-primary" type="button">Subscribe</button>
-              </div>
-            </form>
+        <div class="col-md-4 offset-md-1 mb-3">
+          <img src="https://skylake28.github.io/team7/img/logo.png"/>
+            <p>Knowledge acquired through many years of product development and improvement has resulted in our smart solutions.</p>
+           
           </div>
       <div class="col-6 col-md-2 mb-3">
         <h5>Quick Links</h5>
+        <hr id="line"/>
         <ul class="nav flex-column">
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+          <li class="nav-item mb-2"><i class="fa-solid fa-star"></i><a href="#" class="nav-link p-0 text-muted hvr-forward">Home</a></li>
+          <li class="nav-item mb-2"><i class="fa-solid fa-star"></i><a href="#" class="nav-link p-0 text-muted hvr-forward">About Us</a></li>
+          <li class="nav-item mb-2"><i class="fa-solid fa-star"></i><a href="#" class="nav-link p-0 text-muted hvr-forward">Services</a></li>
+          <li class="nav-item mb-2"><i class="fa-solid fa-star"></i><a href="#" class="nav-link p-0 text-muted hvr-forward">Shop</a></li>
+          <li class="nav-item mb-2"><i class="fa-solid fa-star"></i><a href="#" class="nav-link p-0 text-muted hvr-forward">Contact Us</a></li>
         </ul>
       </div>
 
       <div class="col-6 col-md-2 mb-3">
         <h5>Services</h5>
+        <hr id="line"/>
         <ul class="nav flex-column">
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+          <li class="nav-item mb-2"><i class="fa-solid fa-star"></i><a href="#" class="nav-link p-0 text-muted hvr-forward">Structured Cabling</a></li>
+          <li class="nav-item mb-2"><i class="fa-solid fa-star"></i><a href="#" class="nav-link p-0 text-muted hvr-forward">Security Systems</a></li>
+          <li class="nav-item mb-2"><i class="fa-solid fa-star"></i><a href="#" class="nav-link p-0 text-muted hvr-forward"> Phone System</a></li>
+          <li class="nav-item mb-2"><i class="fa-solid fa-star"></i><a href="#" class="nav-link p-0 text-muted hvr-forward"> Network Services</a></li>
+          <li class="nav-item mb-2"><i class="fa-solid fa-star"></i><a href="#" class="nav-link p-0 text-muted hvr-forward">Corporate Services</a></li>
         </ul>
       </div>
 
-      <div class="col-6 col-md-2 mb-3">
+      <div class="col-6 col-md-3 mb-3">
         <h5>Contact Us</h5>
+        <hr id="line"/>
         <ul class="nav flex-column">
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+          <li class="nav-item mb-2"><i class="fa-solid fa-phone"></i><a href="#" class="nav-link p-0 text-muted hvr-forward"> +1-(000)-000-0000</a></li>
+          <li class="nav-item mb-2"><i class="fa-solid fa-mobile"></i><a href="#" class="nav-link p-0 text-muted hvr-forward">+1-(000)-000-0000</a></li>
+          <li class="nav-item mb-2"><i class="fa-solid fa-envelope"></i><a href="#" class="nav-link p-0 text-muted hvr-forward"> hello@switcheye.com </a></li>
+          <li class="nav-item mb-2"><i class="fa-duotone fa-headset"></i><a href="#" class="nav-link p-0 text-muted hvr-forward"> support@switcheye.com</a></li>
+          <li class="nav-item mb-2"><i class="fa-solid fa-location-dot"></i></i><a href="#" class="nav-link p-0 text-muted hvr-forward">Metro Manila, Philippines.</a></li>
         </ul>
       </div>
 
@@ -199,9 +270,27 @@
     <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
       <p>&copy; 2022 Switch Eye, Inc. All rights reserved.</p>
       <ul class="list-unstyled d-flex">
-        <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"/></svg></a></li>
-        <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"/></svg></a></li>
-        <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"/></svg></a></li>
+        <li class="ms-3"><a class="link-dark" href="#">
+          <i class="fa-brands fa-square-facebook"></i>
+        </a>
+        </li>
+        <li class="ms-3"><a class="link-dark" href="#">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        </li>
+        <li class="ms-3"><a class="link-dark" href="#">
+          <i class="fa-brands fa-square-twitter"></i>
+        </a>
+        </li>
+        <li class="ms-3"><a class="link-dark" href="#">
+          <i class="fa-brands fa-square-google-plus"></i>
+        </a>
+        </li>
+        <li class="ms-3"><a class="link-dark" href="#">
+          <i class="fa-brands fa-square-pinterest"></i> 
+        </a>
+        </li>
+       
       </ul>
     </div>
   </footer>
