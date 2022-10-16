@@ -1,0 +1,116 @@
+/* -------Al products page-------- */
+
+.pagination-container {
+    margin: 0 auto 80px;
+    display: flex;
+    flex-direction: row;
+}
+
+.pagination-container span {
+    display: inline-block;
+    border: 1px solid #051242;
+    margin-left: 10px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+}
+
+.pagination-container span:hover {
+    background: #9caff5;
+    color: #fff;
+}
+
+.disabled { 
+    pointer-events: none;
+    background-color: #cacbce;
+    border: none !important;
+    color: linen;
+    opacity: 1;
+}
+
+/* .pagination-container span:first-of-type {
+    background-color: #bbb;
+} */
+
+.pagination-number.active {
+    color: #fff;
+    background: #0085b6;
+  }
+
+.hidden {
+display: none;
+}
+
+.cards {
+    margin-left: 20px;
+}
+ 
+/* for hover click for more detail */
+
+.DetailbtnOverlay {
+    position: absolute;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 99;
+    animation-name: show_top;
+    animation-duration: 1s;
+}
+
+#moreDetailbtn {
+    font-size: 20px;
+}
+
+@keyframes show_top {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.itemslisted:hover {
+    transform: translateY(-5px);
+}
+
+.itemslisted:hover .DetailbtnOverlay{
+    display: flex;
+}
+
+.modal ul {
+    list-style: none;
+}
+
+.modal .img-modal {
+    max-width: 100px;
+}
+
+.removeSelectedCartItem {
+    cursor: pointer;
+}
+
+#productImg {
+    max-width: 100%;
+}
+
+.small-img {
+    max-width: 80%;
+}
+
+.small-img:hover {
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 575px) {
+    
+    .small-img {
+        display: none;
+    }
+}
