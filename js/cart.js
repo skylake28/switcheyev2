@@ -4,8 +4,8 @@ if(!productsInCart){
 }
 
 const parentElementCart = document.querySelector('#buyItems');
-const cartSumItem = document.querySelector('.cart p');
-const cartSumItem2 = document.querySelector('.top span');
+const cartSumItem = document.querySelector('.cartTotalinNav');
+const cartSumItem2 = document.querySelector('.totalitemsInsideModal');
 const checkOuttTotalPrice = document.querySelector('#totalPrices');
 const products = document.querySelector('.productUnder');
 
@@ -19,6 +19,11 @@ const countTheSumPrice = () => { // 4
 	return sum;
 }
  
+function numberWithCommas(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
+
+
 //get selected items and store in local storage
 const updateShoppingCartHTML = function () {  // 3
 	localStorage.setItem('shoppingCart', JSON.stringify(productsInCart));
@@ -26,27 +31,35 @@ const updateShoppingCartHTML = function () {  // 3
 		let result = productsInCart.map(product => {
 			// console.log('yes');
 			return `
-				<li class="buyItem">
-					<img src="${product.image}">
-					<div class="cartProductDetails">
+				<tr>
+					<td class="align-middle text-center"><img src="${product.image}" class="img-modal"></td>
+					<td class="align-middle text-center cartProductDetails">
 						<h5>${product.name}</h5>
-						<h6>&#8369;<span>${product.price}</span></h6>
+						<h6>&#8369;<span>${numberWithCommas(product.price)}</span></h6>
 
-						<div class="addRemoveProd">
-							<button class="btn button-minus" data-id=${product.id}>-</button>
+						<div class="align-middle text-center addRemoveProd">
+							<button class="btn btn-primary button-minus btn-sm" data-id=${product.id}>-</button>
 							<span class="countOfProduct">${product.count}</span>
-							<button class="btn button-plus" data-id=${product.id}>+</button>
+							<button class="btn btn-primary button-plus btn-sm" data-id=${product.id}>+</button>
 						</div>
 						
-					</div>
-					<span class="removeSelectedCartItem" data-id=${product.id}>&#10006;</span>
-				</li>`
+					</td>
+					<td class="align-middle text-center"><button class="btn btn-danger removeSelectedCartItem" data-id=${product.id}>Remove</button></td>
+				</tr>`
 		});
-		parentElementCart.innerHTML = result.join(''); //Displays/Join items on div with ID of #buyItems.
+		parentElementCart.innerHTML =`<thead class="thead-light">
+										<tr>
+											<th>Product Image</th>
+											<th>Product Name/Price/Quantity</th>
+											<th>Remove from Cart</th>
+										</tr>
+									</thead>` + 
+									`<tbody>` + result.join(''); + //Displays/Join items on div with ID of #buyItems.
+									`</tbody>`
 		document.querySelector('.checkout').classList.remove('hidden');
 		cartSumItem.innerHTML = countTotal(); //Displays total amount on div with class cart and p tag.
 		cartSumItem2.innerHTML = countTotal();
-		checkOuttTotalPrice.innerHTML = '<p>Total Price: <span id="totalPrices">&#8369;' + countTheSumPrice() + '</span></p>';
+		checkOuttTotalPrice.innerHTML = '<p>Total Price: <span id="totalPrices">&#8369;' + numberWithCommas(countTheSumPrice()) + '</span></p>';
 		updateProductsInPaymentStorage();
 	}
 	else {
@@ -99,6 +112,7 @@ if (products != null ){
 			}
 			updateProductsInCart(product);
 			updateShoppingCartHTML();
+			updateShoppingCartReview();
 		}
 	});
 }
@@ -124,6 +138,7 @@ if (parentElementCart != null){
 				}
 			}
 			updateShoppingCartHTML();
+			updateShoppingCartReview();
 		}
 	});
 }
@@ -139,11 +154,12 @@ if (parentElementCart != null){
 				}
 			}
 			updateShoppingCartHTML();
+			updateShoppingCartReview();
 		}
 	});
 }
 
-const createCartHistory = document.querySelector('checkout');
+const createCartHistory = document.querySelector('.createCartHistory');
 let productsCheckOut = [];
 
 function updateProductsInPaymentStorage() { 
@@ -154,10 +170,10 @@ function updateProductsInPaymentStorage() {
 		let day = dateObj.getUTCDate();
 		let year = dateObj.getUTCFullYear();
 		newdate = year + "/" + month + "/" + day;
-		console.log(newdate);
+		// console.log(newdate);
 		productsCheckOut += localStorage.setItem('paymentCard', localStorage.getItem(key));
 	}
 }
 
-
+updateProductsInPaymentStorage();
 updateShoppingCartHTML();

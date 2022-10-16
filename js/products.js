@@ -903,8 +903,9 @@ function numberWithCommas(x) {
 const arrayProducts = () => {for (let i = 0; i < productsHickvision.length; i++) {
     const element = productsHickvision[i];
     let x = numberWithCommas(element.price);
-    let result = `<div class="col-4 itemslisted">
-                    <a href="product-details.html?id=${element.id}"><img src="${element.images.imagesA}"></a>
+    let result = `<div class="col-sm-4 itemslisted">
+                        
+                    <a href="product-details.html?id=${element.id}"><img src="${element.images.imagesA}" class="img hover img-fluid" style="max-height: 280px"></a>
                     <h4>${element.name}</h4>
                     <div class="rating">
                         <i class="fa fa-star"></i>
@@ -916,7 +917,7 @@ const arrayProducts = () => {for (let i = 0; i < productsHickvision.length; i++)
                     <p>&#8369;${x}</p>
                     <div class="DetailbtnOverlay">
 
-                        <a href="product-details.html?id=${element.id}" class="btn" id="moreDetailbtn" data-product-id="${element.id}">Click for Details...</a>
+                        <a href="product-details.html?id=${element.id}" class="btn btn-primary" id="moreDetailbtn" data-product-id="${element.id}">Click for Details...</a>
 
                     </div>
                 </div>`
@@ -946,34 +947,34 @@ const arraySelectedProducts = () => {
         let imageD = '';
         // console.log(x);
         if (element.images.imagesD) {
-            imageD = `<div class="small-img-col">
-                            <img src="${element.images.imagesD}" alt="" class="small-img">
+            imageD = `<div class="col-sm-3 small-img-col">
+                            <img src="${element.images.imagesD}" alt="" class="small-img img-fluid">
                         </div>`;
         }
         if (element.images.imagesB) {
-            allImages = `<div class="small-img-col">
-                                <img src="${element.images.imagesA}" alt="" class="small-img">
+            allImages = `<div class="col-sm-3 small-img-col">
+                                <img src="${element.images.imagesA}" alt="" class="small-img img-fluid">
                             </div>
-                            <div class="small-img-col">
-                                <img src="${element.images.imagesB}" alt="" class="small-img">
+                            <div class="col-sm-3 small-img-col">
+                                <img src="${element.images.imagesB}" alt="" class="small-img img-fluid">
                             </div>
-                            <div class="small-img-col">
-                                <img src="${element.images.imagesC}" alt="" class="small-img">
+                            <div class="col-sm-3 small-img-col">
+                                <img src="${element.images.imagesC}" alt="" class="small-img img-fluid">
                             </div>`+ 
                             imageD                      
         } 
-        let result = `<div class="col-2">
+        let result = `<div class="col-sm-6">
                         <img src="${element.images.imagesA}" alt="" max-width="100%" id="productImg">
-                        <div class="small-img-row">`
+                        <div class="row small-img-row img-fluid">`
                         + allImages +
                         `</div>
                     </div>
-                    <div class="col-2">
+                    <div class="col-sm-6">
                         <p class="productName">${element.name}</p>
                         <h1 id="prodname">${element.prodNameContent}</h1>
-                        <h4>&#8369;<span class="priceValue">${element.price}</span></h4>
+                        <h4>&#8369;<span class="priceValue">${numberWithCommas(element.price)}</span></h4>
                         
-                        <a href="#" class="btn addToCart" data-product-id="${element.id}">Add to Cart</a>
+                        <a href="#" class="btn btn-primary addToCart" data-product-id="${element.id}">Add to Cart</a>
                         
                         <h3>Product Details <i class="fa fa-indent"></i></h3><br>
                         <ul>
@@ -1008,8 +1009,8 @@ const arrayDetailedProducts = () => {
         for (i = k; i < k+6; i++) {
         const element2 = productsHickvision[i];
         let x = numberWithCommas(element2.price);
-        let result2 = `<div class="col-4">
-                        <a href="product-details.html?id=${element2.id}"><img src="${element2.images.imagesA}"></a>
+        let result2 = `<div class="col-sm-4 itemslisted">
+                        <a href="product-details.html?id=${element2.id}"><img class="img hover img-fluid" src="${element2.images.imagesA}" style="max-height: 280px"></a>
                         <h4>${element2.name}</h4>
                         <div class="rating">
                             <i class="fa fa-star"></i>
@@ -1021,10 +1022,10 @@ const arrayDetailedProducts = () => {
                         <p>&#8369;${x}</p>
                         <div class="DetailbtnOverlay">
 
-                        <a href="product-details.html?id=${element2.id}" class="btn" id="moreDetailbtn" data-product-id="${element2.id}">Click for Details...</a>
+                        <a href="product-details.html?id=${element2.id}" class="btn btn-primary" id="moreDetailbtn" data-product-id="${element2.id}">Click for Details...</a>
 
-                        </div>
-                    </div>`
+                    </div>
+                </div>`
         if(product2 == element2.id) {
             i++;
             } else  if (i == productsHickvision.length){
@@ -1045,7 +1046,7 @@ arraySelectedProducts();
 //pagination
 const paginationNumbers = document.getElementById("pagination-numbers");
 const paginatedList = document.getElementById("list");
-const listItems = paginatedList.querySelectorAll(".col-4");
+const listItems = paginatedList.querySelectorAll(".itemslisted");
 const nextButton = document.getElementById("next-button");
 const prevButton = document.getElementById("prev-button");
 
@@ -1055,7 +1056,7 @@ const pageCount = Math.ceil(listItems.length / paginationLimit);
 
 const appendPageNumber = (index) => {
     const pageNumber = document.createElement("span");
-    pageNumber.className = "pagination-number";
+    pageNumber.className = "pagination-number page-item";
     pageNumber.innerHTML = index;
     pageNumber.setAttribute("page-index", index);
     pageNumber.setAttribute("aria-label", "Page " + index);
