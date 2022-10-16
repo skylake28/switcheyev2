@@ -896,16 +896,12 @@ const parentSelectedElement = document.querySelector('.selectedProduct');
 const productList = document.querySelector('.hikProduct')
 const nav = document.querySelector ('nav');
 
-function numberWithCommas(x) {
-    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-}
-
 const arrayProducts = () => {for (let i = 0; i < productsHickvision.length; i++) {
     const element = productsHickvision[i];
     let x = numberWithCommas(element.price);
     let result = `<div class="col-sm-4 itemslisted">
                         
-                    <a href="product-details.html?id=${element.id}"><img src="${element.images.imagesA}" class="img hover img-fluid" style="max-height: 280px"></a>
+                    <a href="product-details.html?id=${element.id}"><img src="${element.images.imagesA}" class="img hover img-fluid" style="max-height: 250px"></a>
                     <h4>${element.name}</h4>
                     <div class="rating">
                         <i class="fa fa-star"></i>
@@ -974,7 +970,7 @@ const arraySelectedProducts = () => {
                         <h1 id="prodname">${element.prodNameContent}</h1>
                         <h4>&#8369;<span class="priceValue">${numberWithCommas(element.price)}</span></h4>
                         
-                        <a href="#" class="btn btn-primary addToCart" data-product-id="${element.id}">Add to Cart</a>
+                        <a href="#" class="btn btn-primary addToCart" data-product-id="${element.id}" data-price="${element.price}">Add to Cart</a>
                         
                         <h3>Product Details <i class="fa fa-indent"></i></h3><br>
                         <ul>
@@ -1006,33 +1002,35 @@ const arrayDetailedProducts = () => {
             } else {
                 k = product2-5;
             }
-        for (i = k; i < k+6; i++) {
+        for (i = k; i < k+8; i++) {
         const element2 = productsHickvision[i];
-        let x = numberWithCommas(element2.price);
-        let result2 = `<div class="col-sm-4 itemslisted">
-                        <a href="product-details.html?id=${element2.id}"><img class="img hover img-fluid" src="${element2.images.imagesA}" style="max-height: 280px"></a>
-                        <h4>${element2.name}</h4>
-                        <div class="rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star-o"></i>
+        if (element2) {
+            let x = numberWithCommas(element2.price);
+            let result2 = `<div class="col-sm-4 itemslisted">
+                            <a href="product-details.html?id=${element2.id}"><img class="img hover img-fluid" src="${element2.images.imagesA}" style="max-height: 250px"></a>
+                            <h4>${element2.name}</h4>
+                            <div class="rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star-o"></i>
+                            </div>
+                            <p>&#8369;${x}</p>
+                            <div class="DetailbtnOverlay">
+
+                            <a href="product-details.html?id=${element2.id}" class="btn btn-primary" id="moreDetailbtn" data-product-id="${element2.id}">Click for Details...</a>
+
                         </div>
-                        <p>&#8369;${x}</p>
-                        <div class="DetailbtnOverlay">
-
-                        <a href="product-details.html?id=${element2.id}" class="btn btn-primary" id="moreDetailbtn" data-product-id="${element2.id}">Click for Details...</a>
-
-                    </div>
-                </div>`
-        if(product2 == element2.id) {
-            i++;
-            } else  if (i == productsHickvision.length){
-                i = 1;
-            } else {
-                parentElement2.innerHTML += result2;
-            }  
+                    </div>`
+            if(product2 == element2.id) {
+                i++;
+                } else  if (i == productsHickvision.length){
+                    i = 1;
+                } else {
+                    parentElement2.innerHTML += result2;
+                } 
+            } 
         }              
     }
 }
