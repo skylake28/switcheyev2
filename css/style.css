@@ -123,3 +123,9 @@
 }
 
 /* End Contact US Page CSS Styles */
+/* About Us CSS */
+.cta-about{
+  min-height: 150px;
+  background-color: #051242;
+}
+/* End About Us CSS */
