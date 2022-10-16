@@ -1,10 +1,12 @@
+/* Fonts Imports */
 @import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Rubik&display=swap');
+/* END Font Imports */
 
-body{
-  padding-top:175px;
-
+/* HOMEPAGE CSS Styles */
+.pt-10{
+  padding-top: 175px;
 }
 .navbar{
     min-height: 150px;
@@ -99,3 +101,25 @@ body{
 .accordion-button-icon {
   background-color: #fff !important;
 }
+/* End HOMEPAGE Css Style */
+
+
+/* Contact US Page CSS Styles */
+.contact-us{
+  min-height: 400px;
+  background-image: url('../img/contactus-hero.png');
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.contact-us h1{
+  color: #fff;
+  font-size: 50px;
+}
+
+.mt-10{
+  margin-top: 175px;
+}
+
+/* End Contact US Page CSS Styles */
