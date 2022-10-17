@@ -162,6 +162,7 @@ if (parentElementCart != null){
 			}
 			updateShoppingCartHTML();
 			updateProductsInPaymentStorage();
+			updateShoppingCartReview();
 		}
 	});
 }
@@ -178,6 +179,7 @@ if (parentElementCart != null){
 			}
 			updateShoppingCartHTML();
 			updateProductsInPaymentStorage();
+			updateShoppingCartReview();
 		}
 	});
 }
