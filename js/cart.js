@@ -40,7 +40,7 @@ const updateShoppingCartHTML = function () {  // 3
 						<h5>${product.name}</h5>
 					</td>
 					<td class="align-middle text-center">
-						<p>&#8369;<span class="text-dark">${numberWithCommas(product.basePrice)}</span></p>
+						<p class="text-dark">&#8369;<span class="text-dark">${numberWithCommas(product.basePrice)}</span></p>
 					</td>
 
 					<td class="align-middle text-center">
