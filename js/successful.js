@@ -24,7 +24,7 @@ console.log(buyerInfo);
 console.log(productsCheckOut);
 
 
-receipt.innerHTML = `<p>Receipt Number: KODEGO` + getRandomArbitrary(10000) + `</p>`
+receipt.innerHTML = `<p class="text-dark">Receipt Number: KODEGO` + getRandomArbitrary(10000) + `</p>`
             + `<p class="text-dark">Total Amount Paid: &#8369; <span class="text-success fw-bold">${numberWithCommas(countTheSumPrice())}</span>`
             + `<p class="text-dark">Paid by: ${buyerInfo.firstname} ${buyerInfo.lastname}</p>`
             + `<p class="text-dark">Phone number: ${buyerInfo.tel}</p>`
