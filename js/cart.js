@@ -76,7 +76,7 @@ const updateShoppingCartHTML = function () {  // 3
 		document.querySelector('.checkout').classList.remove('hidden');
 		cartSumItem.innerHTML = countTotal(); //Displays total amount on div with class cart and p tag.
 		cartSumItem2.innerHTML = countTotal();
-		checkOuttTotalPrice.innerHTML = '<p class="text-dark">Total Price: <span id="totalPrices">&#8369;' + numberWithCommas(countTheSumPrice()) + '</span></p>';
+		checkOuttTotalPrice.innerHTML = '<p class="text-dark">Total Price: <span class="text-dark" id="totalPrices">&#8369;' + numberWithCommas(countTheSumPrice()) + '</span></p>';
 		updateProductsInPaymentStorage();
 	}
 	else {
