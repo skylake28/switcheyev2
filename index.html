@@ -5,14 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Switch Eye | Provide All Kind Of Tech Solutions</title>
+    <!-- CDN LINKS -->
     <link rel="icon" type="image/x-icon" href="https://skylake28.github.io/team7/img/favico.png">
     <link href="./css/style.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css" integrity="sha512-csw0Ma4oXCAgd/d4nTcpoEoz4nYvvnk21a8VA2h2dzhPAvjbUIK6V3si7/g/HehwdunqqW18RwCJKpD7rL67Xg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css" integrity="sha512-csw0Ma4oXCAgd/d4nTcpoEoz4nYvvnk21a8VA2h2dzhPAvjbUIK6V3si7/g/HehwdunqqW18RwCJKpD7rL67Xg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.css" integrity="sha512-phGxLIsvHFArdI7IyLjv14dchvbVkEDaH95efvAae/y2exeWBQCQDpNFbOTdV1p4/pIa/XtbuDCnfhDEIXhvGQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- /CDN LINKS -->
 </head>
 <body>
     <!-- NAV BAR CODES-->
-    <nav class="navbar navbar-expand-lg">
+    <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container-fluid">
           <a class="navbar-brand" href="#"><img src="https://skylake28.github.io/team7/img/logo.png"/></a>
           <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
@@ -21,13 +27,21 @@
           <div class="collapse navbar-collapse" id="navbarScroll">
             <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 300px;">
               <li class="nav-item">
-                <a class="nav-link active hvr-underline-from-center" aria-current="page" href="#">Home</a>
+                <a class="nav-link active hvr-underline-from-center" aria-current="page" href="https://skylake28.github.io/switcheyev2/">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link hvr-underline-from-center" href="#">About Us</a>
+                <a class="nav-link hvr-underline-from-center" href="https://skylake28.github.io/switcheyev2/about-us.html">About Us</a>
               </li>
-               <li class="nav-item">
-                <a class="nav-link hvr-underline-from-center" href="https://skylake28.github.io/switcheyev2/services.html">Services</a>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle hvr-underline-from-center" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Services
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
               </li>
 
               <li class="nav-item dropdown">
@@ -42,73 +56,65 @@
                 </ul>
               </li>
               <li class="nav-item">
-                <a class="nav-link hvr-underline-from-center" href="#">Contact Us</a>
+                <a class="nav-link hvr-underline-from-center" href="https://skylake28.github.io/switcheyev2/contact-us.html">Contact Us</a>
               </li>
             </ul>
-            <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
+            <a href="" id="shoppingcart-btn" class="btn btn-primary ms-2 btn btn-primary btn-lg px-3 gap-3 me-5 py-3" data-bs-toggle="modal" data-bs-target="#exampleModalCenter"> <i class="fa-solid fa-cart-shopping"></i>  Shopping Cart <span class="cartTotalinNav text-dark"></span></a>
+            <p class="countitem"></p>
+           
+          
           </div>
         </div>
       </nav>
       <!-- /NAV BAR CODES-->
 
       <!-- Hero -->
-      <!-- <div class="hero px-4 py-5 my-5 text-center">
-        <img class="d-block mx-auto mb-4" src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="72" height="57">
-        <h1 class="display-5 fw-bold">Centered hero</h1>
-        <div class="col-lg-6 mx-auto">
-          <p class="lead mb-4">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
-          <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-            <button type="button" class="btn btn-primary btn-lg px-4 gap-3">Primary button</button>
-            <button type="button" class="btn btn-outline-secondary btn-lg px-4">Secondary</button>
-          </div>
-        </div>
-      </div> -->
-      <div class="container-fluid">
-      <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+      <div class="container-fluid pt-10">
+      <div id="carouselExampleCaptions" class="carousel slide mt-50px" data-bs-ride="carousel">
         <div class="carousel-indicators">
           <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
           <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
           <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
         </div>
         <div class="carousel-inner">
-          <div class="carousel-item active" style="background-image: url('https://source.unsplash.com/LAaSoL0LrYs/1920x1080')">
-            <div class="px-4 py-5 my-5 text-center">
-                <h1 class="display-5 fw-bold">Make Real-Life Connections With IT Experts</h1>
+          <div class="carousel-item active text-center" style="background-image: url('./img/carousel-1.png');">
+            <div id="carousel-item" class="container px-4 py-5 my-5 text-align-center">
+              <h1 class="display-5 fw-bold mt-5">Make Real-Life Connections With IT Experts</h1>
                 <div class="col-lg-6 mx-auto">
                   <p class="lead mb-4">We aim to provide our dealers partners, systems integrators, 
                     and our home, office, and enterprise customers with the most advanced security equipment at the lowest possible prices.</p>
                   <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-                    <button type="button" class="btn btn-primary btn-lg px-4 gap-3">Primary button</button>
-                    <button type="button" class="btn btn-outline-secondary btn-lg px-4">Secondary</button>
+                    <button type="button" class="btn btn-primary btn-lg px-4 gap-3">Our Services</button>
+                    <button type="button" class="btn btn-primary btn-lg px-4 gap-3">Our Products</button>
                   </div>
                 </div>
               </div>
           </div>
-          <div class="carousel-item" style="background-image: url('https://source.unsplash.com/bF2vsubyHcQ/1920x1080')">
+          <div class="carousel-item" style="background-image: url('./img/carousel-2.png');">
             <div class="px-4 py-5 my-5 text-center">
                 
-                <h1 class="display-5 fw-bold">Centered hero</h1>
+                <h1 class="display-5 fw-bold mt-5">Awesome Partner For Your Modern Lifestyle</h1>
                 <div class="col-lg-6 mx-auto">
-                  <p class="lead mb-4">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
+                  <p class="lead mb-4">We focus on building solutions that not only meet today’s requirements but that also help our customers be better prepared for the future. And we’re there every step of the way: from design, to installation and implementation, to trouble shooting, to any future issues that might arise.
+
+                  </p>
                   <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-                    <button type="button" class="btn btn-primary btn-lg px-4 gap-3">Primary button</button>
-                    <button type="button" class="btn btn-outline-secondary btn-lg px-4">Secondary</button>
+                    <button type="button" class="btn btn-primary btn-lg px-4 gap-3">Our Services</button>
+                    <button type="button" class="btn btn-primary btn-lg px-4 gap-3">Our Products</button>
                   </div>
                 </div>
               </div>
           </div>
-          <div class="carousel-item" style="background-image: url('https://source.unsplash.com/szFUQoyvrxM/1920x1080')">
+          <div class="carousel-item" style="background-image: url('./img/carousel-3.png')">
             <div class="px-4 py-5 my-5 text-center">
                 
-                <h1 class="display-5 fw-bold">Centered hero</h1>
+                <h1 class="display-5 fw-bold mt-5">Secure IT Solutions For A More Secure Environment</h1>
                 <div class="col-lg-6 mx-auto">
-                  <p class="lead mb-4">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
+                  <p class="lead mb-4">Our goal is to become a trusted partner who works hard to make our clients be as successful as they can possibly be.
+                  </p>
                   <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-                    <button type="button" class="btn btn-primary btn-lg px-4 gap-3">Primary button</button>
-                    <button type="button" class="btn btn-outline-secondary btn-lg px-4">Secondary</button>
+                    <button type="button" class="btn btn-primary btn-lg px-4 gap-3">Our Services</button>
+                    <button type="button" class="btn btn-primary btn-lg px-4 gap-3">Our Products</button>
                   </div>
                 </div>
               </div>
@@ -126,16 +132,90 @@
 
       </div>
       <!-- /Hero -->
+  
+      <!-- Our Culture -->
+      <div class="container-fluid p-5 culture ">
+     <div class="container">
+      <div class="row">
+        <div class="col-4 col-xs-2">
+          <div class="container">
+            <h1 class="display-5 fw-bold lh-1 mb-3">Our Culture</h1>
+            <img src="./img/culture.jpeg" class="img-fluid"/>            
 
+          </div>
+        </div>
+        <div class="col-8 col-s-4">  
+          
+          <div class="accordion" id="CULTUREACCORDION">
+            <div class="accordion-item mt-3">
+              <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  OPEN AND DIRECT
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#CULTUREACCORDION">
+                <div class="accordion-body">
+                  <strong>We always tell the truth. We are transparent and open. We communicate directly and clearly. This is how we do business because it is the key to having a good partnership.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item mt-3">
+              <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  SKILLED
+                </button>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#CULTUREACCORDION">
+                <div class="accordion-body">
+                  <strong>Our highly skilled IT professionals are specialised in Java, PHP, React, Angular, Vue.js, AWS. Clean code, simplicity, code reviews and test automation will gaurantee long term stability and maintanability of your solutions.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item mt-3">
+              <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  SOLUTION DRIVEN
+                </button>
+              </h2>
+              <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#CULTUREACCORDION">
+                <div class="accordion-body">
+                  <strong>We combine our technichal skills with business afinity and a critical mindset to deliver the best possible solution for your business. For us adding value to your business is the ultimate goal.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item mt-3">
+              <h2 class="accordion-header" id="headingFour">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                  TRUSTWORTHY
+                </button>
+              </h2>
+              <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#CULTUREACCORDION">
+                <div class="accordion-body">
+                  <strong>We are always there to help clients with advice and actions. We take responsibility and deliver the best possible solutions. We take ownership, and joy in delivering the best possible solutions.
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+    </div>
+  </div>
+        </div>
+        
+  
+       <!-- /Our Culture -->
       <!--  CTA  -->
       <div class="container my-5">
         <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg">
           <div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
             <h1 class="display-4 fw-bold lh-1">Trusted Effective Service and Solutions</h1>
-            <p class="lead">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
+            <p class="lead text-muted">While our teams facilitate the best IT solution for your company, we make sure your experience is hassle-free.</p>
             <div class="d-grid gap-2 d-md-flex justify-content-md-start mb-4 mb-lg-3">
-              <button type="button" class="btn btn-primary btn-lg px-4 me-md-2 fw-bold">Primary</button>
-              <button type="button" class="btn btn-outline-secondary btn-lg px-4">Default</button>
+              <button type="button" class="btn btn-primary btn-lg px-5 me-md-3 fw-bold">Our Services</button>
+              <button type="button" class="btn btn-danger btn-lg px-5 me-md-3 fw-bold">Our Products</button>
             </div>
           </div>
           <div class="col-lg-4 offset-lg-1 p-0 overflow-hidden shadow-lg">
@@ -143,59 +223,56 @@
           </div>
         </div>
       </div>
-
       <!-- /CTA -->
+      <!-- Customer FeedBack-->
+  
 
-
+      <!-- /Customer Feed Back-->
       <!-- Footer -->
 
-      <div class="b-divider"></div>
 
 <div class="container-fluid footer">
 <div class="container">
   <footer class="py-5">
     <div class="row">
-        <div class="col-md-5 offset-md-1 mb-3">
-            <form>
-              <h5>Subscribe to our newsletter</h5>
-              <p>Monthly digest of what's new and exciting from us.</p>
-              <div class="d-flex flex-column flex-sm-row w-100 gap-2">
-                <label for="newsletter1" class="visually-hidden">Email address</label>
-                <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
-                <button class="btn btn-primary" type="button">Subscribe</button>
-              </div>
-            </form>
+        <div class="col-md-4 offset-md-1 mb-3">
+          <img class="animate__bounce animate__infinite	infinite" src="https://skylake28.github.io/team7/img/logo.png"/>
+            <p>Knowledge acquired through many years of product development and improvement has resulted in our smart solutions.</p>
+           
           </div>
       <div class="col-6 col-md-2 mb-3">
         <h5>Quick Links</h5>
+        <hr id="line"/>
         <ul class="nav flex-column">
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+          <li class="nav-item mb-2"><i class="fa-solid fa-star"></i><a href="#" class="nav-link p-0 text-muted hvr-forward">Home</a></li>
+          <li class="nav-item mb-2"><i class="fa-solid fa-star"></i><a href="#" class="nav-link p-0 text-muted hvr-forward">About Us</a></li>
+          <li class="nav-item mb-2"><i class="fa-solid fa-star"></i><a href="#" class="nav-link p-0 text-muted hvr-forward">Services</a></li>
+          <li class="nav-item mb-2"><i class="fa-solid fa-star"></i><a href="#" class="nav-link p-0 text-muted hvr-forward">Shop</a></li>
+          <li class="nav-item mb-2"><i class="fa-solid fa-star"></i><a href="#" class="nav-link p-0 text-muted hvr-forward">Contact Us</a></li>
         </ul>
       </div>
 
       <div class="col-6 col-md-2 mb-3">
         <h5>Services</h5>
+        <hr id="line"/>
         <ul class="nav flex-column">
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+          <li class="nav-item mb-2"><i class="fa-solid fa-star"></i><a href="#" class="nav-link p-0 text-muted hvr-forward">Structured Cabling</a></li>
+          <li class="nav-item mb-2"><i class="fa-solid fa-star"></i><a href="#" class="nav-link p-0 text-muted hvr-forward">Security Systems</a></li>
+          <li class="nav-item mb-2"><i class="fa-solid fa-star"></i><a href="#" class="nav-link p-0 text-muted hvr-forward"> Phone System</a></li>
+          <li class="nav-item mb-2"><i class="fa-solid fa-star"></i><a href="#" class="nav-link p-0 text-muted hvr-forward"> Network Services</a></li>
+          <li class="nav-item mb-2"><i class="fa-solid fa-star"></i><a href="#" class="nav-link p-0 text-muted hvr-forward">Corporate Services</a></li>
         </ul>
       </div>
 
-      <div class="col-6 col-md-2 mb-3">
+      <div class="col-6 col-md-3 mb-3">
         <h5>Contact Us</h5>
+        <hr id="line"/>
         <ul class="nav flex-column">
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+          <li class="nav-item mb-2"><i class="fa-solid fa-phone"></i><a href="#" class="nav-link p-0 text-muted hvr-forward"> +1-(000)-000-0000</a></li>
+          <li class="nav-item mb-2"><i class="fa-solid fa-mobile"></i><a href="#" class="nav-link p-0 text-muted hvr-forward">+1-(000)-000-0000</a></li>
+          <li class="nav-item mb-2"><i class="fa-solid fa-envelope"></i><a href="#" class="nav-link p-0 text-muted hvr-forward"> hello@switcheye.com </a></li>
+          <li class="nav-item mb-2"><i class="fa-solid fa-envelope"></i><a href="#" class="nav-link p-0 text-muted hvr-forward"> support@switcheye.com</a></li>
+          <li class="nav-item mb-2"><i class="fa-solid fa-location-dot"></i></i><a href="#" class="nav-link p-0 text-muted hvr-forward">Metro Manila, Philippines.</a></li>
         </ul>
       </div>
 
@@ -205,16 +282,34 @@
     <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
       <p>&copy; 2022 Switch Eye, Inc. All rights reserved.</p>
       <ul class="list-unstyled d-flex">
-        <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"/></svg></a></li>
-        <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"/></svg></a></li>
-        <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"/></svg></a></li>
+        <li class="ms-3"><a class="link-dark" href="#">
+          <i class="fa-brands fa-square-facebook"></i>
+        </a>
+        </li>
+        <li class="ms-3"><a class="link-dark" href="#">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        </li>
+        <li class="ms-3"><a class="link-dark" href="#">
+          <i class="fa-brands fa-square-twitter"></i>
+        </a>
+        </li>
+        <li class="ms-3"><a class="link-dark" href="#">
+          <i class="fa-brands fa-square-google-plus"></i>
+        </a>
+        </li>
+        <li class="ms-3"><a class="link-dark" href="#">
+          <i class="fa-brands fa-square-pinterest"></i> 
+        </a>
+        </li>
+       
       </ul>
     </div>
   </footer>
 </div>
 </div>
       <!-- /Footer -->
-
+      <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="64bdfed1-d2a6-4e51-a30f-c1a98c1110ba";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 </body>
 </html>
