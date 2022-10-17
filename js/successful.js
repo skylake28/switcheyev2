@@ -25,12 +25,12 @@ console.log(productsCheckOut);
 
 
 receipt.innerHTML = `<p>Receipt Number: KODEGO` + getRandomArbitrary(10000) + `</p>`
-            + `<p>Total Amount Paid: &#8369; <span class="text-success fw-bold">${numberWithCommas(countTheSumPrice())}</span>`
-            + `<p>Paid by: ${buyerInfo.firstname} ${buyerInfo.lastname}</p>`
-            + `<p>Phone number: ${buyerInfo.tel}</p>`
-            + `<p>Email Adress: ${buyerInfo.email}</p>`
-            + `<p>Shipping Address: ${buyerInfo.address}, ${buyerInfo.city}, ${buyerInfo.country}</p>`
-            + `<p>For the Payment of:</p>`;
+            + `<p class="text-dark">Total Amount Paid: &#8369; <span class="text-success fw-bold">${numberWithCommas(countTheSumPrice())}</span>`
+            + `<p class="text-dark">Paid by: ${buyerInfo.firstname} ${buyerInfo.lastname}</p>`
+            + `<p class="text-dark">Phone number: ${buyerInfo.tel}</p>`
+            + `<p class="text-dark">Email Adress: ${buyerInfo.email}</p>`
+            + `<p class="text-dark">Shipping Address: ${buyerInfo.address}, ${buyerInfo.city}, ${buyerInfo.country}</p>`
+            + `<p class="text-dark">For the Payment of:</p>`;
 
 
 const receipt2 = document.querySelector('.customers');
