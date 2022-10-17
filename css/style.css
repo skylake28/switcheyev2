@@ -1,13 +1,5 @@
-/* Fonts Imports */
 @import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Rubik&display=swap');
-/* END Font Imports */
-
-/* HOMEPAGE CSS Styles */
-.pt-10{
-  padding-top: 175px;
-}
 .navbar{
     min-height: 150px;
     background-color: #051242;
@@ -28,8 +20,10 @@
   } 
 
 
+
   .carousel-item {
-    height: 600px;
+    width: 100%;
+    min-height: 450px;
     background: no-repeat center center scroll;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -37,16 +31,6 @@
     background-size: cover;
   }
   
-  .carousel-item h1, p{
-    color:#fff;
-  }
-.culture{
-  background-color: #051242;
-}
-.culture h1{
- color: #fff !important;
-}
-
   .b-divider {
     height: 2rem;
     background-color: rgba(0, 0, 0, .1);
@@ -55,212 +39,8 @@
     box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
   }
 
-
-
   .footer{
     min-height: 150px;
     background-color: #051242;
     color: #fff;
-    font-family: 'Merriweather', serif;
 }
-.footer a{
-  font-family: 'Merriweather', serif;
-  font-size:15px !important;
-  color:#fff !important;
-}
-.footer a:hover{
-  color: #03B4E7 !important;
-}
-
-.footer i{
-  margin-right:5px;
-}
-#line {
-  border: 1px solid #49B6FF;
-  width: 50px;
-  margin-top: 10px;
-}
-.accordion-button{
-  background-color: #3D4AC5 !important;
-  color: #fff !important;
-  font-weight: bold;
-  border: none !important;
-}
-.accordion-item{
-  border: none !important;
-  box-shadow: 0 2px 25px 0 rgba(110,130,208, .18);
-}
-.btn-primary{
-  background-color: #2F61D3 !important;
-}
-
-.btn-primary:hover{
-  background-color: #3D4AC5 !important;
-}
-
-.accordion-button-icon {
-  background-color: #fff !important;
-}
-/* End HOMEPAGE Css Style */
-
-
-/* Contact US Page CSS Styles */
-.contact-us{
-  min-height: 400px;
-  background-image: url('../img/contactus-hero.png');
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-.contact-us h1{
-  color: #fff;
-  font-size: 50px;
-}
-
-.mt-10{
-  margin-top: 175px;
-}
-
-/* End Contact US Page CSS Styles */
-/* About Us CSS */
-.cta-about{
-  min-height: 150px;
-  background-color: #051242;
-}
-/* End About Us CSS */
-
-
-/* Product Page  CSS */
-
-/* -------Al products page-------- */
-
-.pagination-container {
-  margin: 0 auto 80px;
-  display: flex;
-  flex-direction: row;
-}
-
-.pagination-container span {
-  display: inline-block;
-  border: 1px solid #051242;
-  margin-left: 10px;
-  width: 40px;
-  height: 40px;
-  text-align: center;
-  line-height: 40px;
-  cursor: pointer;
-}
-
-.pagination-container span:hover {
-  background: #9caff5;
-  color: #fff;
-}
-
-.disabled { 
-  pointer-events: none;
-  background-color: #cacbce;
-  border: none !important;
-  color: linen;
-  opacity: 1;
-}
-
-/* .pagination-container span:first-of-type {
-  background-color: #bbb;
-} */
-
-.pagination-number.active {
-  color: #fff;
-  background: #0085b6;
-}
-
-.hidden {
-display: none;
-}
-
-.cards {
-  margin-left: 20px;
-}
-
-/* for hover click for more detail */
-
-.DetailbtnOverlay {
-  position: absolute;
-  display: none;
-  align-items: center;
-  justify-content: center;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 99;
-  animation-name: show_top;
-  animation-duration: 1s;
-}
-
-#moreDetailbtn {
-  font-size: 20px;
-}
-
-@keyframes show_top {
-  from {
-      opacity: 0;
-  }
-  to {
-      opacity: 1;
-  }
-}
-
-.itemslisted:hover {
-  transform: translateY(-5px);
-}
-
-.itemslisted:hover .DetailbtnOverlay{
-  display: flex;
-}
-
-.modal ul {
-  list-style: none;
-}
-
-.modal .img-modal {
-  max-width: 100px;
-}
-
-.removeSelectedCartItem {
-  cursor: pointer;
-}
-
-#productImg {
-  max-width: 100%;
-}
-
-.small-img {
-  max-width: 80%;
-}
-
-.small-img:hover {
-  cursor: pointer;
-}
-
-@media only screen and (max-width: 575px) {
-  
-  .small-img {
-      display: none;
-  }
-}
-
-.card {
-  flex-direction: row;
-}
-
-.card-img {
-width: 30% !important;
-}
-
-.container {
-max-width: 960px;
-}
-
-.lh-condensed { line-height: 1.25; }
-/* End Product Page Css */

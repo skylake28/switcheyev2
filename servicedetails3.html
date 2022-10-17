@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+
+
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Urbanist' rel='stylesheet'>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/servicesdetails.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css" integrity="sha512-csw0Ma4oXCAgd/d4nTcpoEoz4nYvvnk21a8VA2h2dzhPAvjbUIK6V3si7/g/HehwdunqqW18RwCJKpD7rL67Xg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.css" integrity="sha512-phGxLIsvHFArdI7IyLjv14dchvbVkEDaH95efvAae/y2exeWBQCQDpNFbOTdV1p4/pIa/XtbuDCnfhDEIXhvGQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+
+  <!-- NAV BAR CODES-->
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><img src="https://skylake28.github.io/team7/img/logo.png"/></a>
+      <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarScroll">
+      <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 300px;">
+        <li class="nav-item">
+        <a class="nav-link active hvr-underline-from-center" aria-current="page" href="https://skylake28.github.io/switcheyev2/">Home</a>
+        </li>
+        <li class="nav-item">
+        <a class="nav-link hvr-underline-from-center" href="https://skylake28.github.io/switcheyev2/about-us.html">About Us</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link hvr-underline-from-center" href="services.html">Services</a>
+          </li>
+
+
+        <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle hvr-underline-from-center" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Our Products
+        </a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">Action</a></li>
+          <li><a class="dropdown-item" href="#">Another action</a></li>
+          <li><hr class="dropdown-divider"></li>
+          <li><a class="dropdown-item" href="#">Something else here</a></li>
+        </ul>
+        </li>
+        <li class="nav-item">
+        <a class="nav-link hvr-underline-from-center" href="https://skylake28.github.io/switcheyev2/contact-us.html">Contact Us</a>
+        </li>
+      </ul>
+
+
+      </div>
+        <div class="cart-btn fixed-top" id="card1" >
+    <i id="cart" class="fas fa-shopping-cart"></i>
+      <span class ="cart-quantity">0</span>
+  </div>
+    </div>
+    </nav>
+
+  <!--  cart modal  -->
+  <div class="cart-modal-overlay">
+    <div class="cart-modal">
+      <i id="close-btn" class="fas fa-times"></i>
+        <h1 class="cart-is-empty">Cart is empty</h1>
+
+        <div class="product-rows">
+        </div>
+        <div class="total">
+          <h1 class="cart-total">TOTAL</h1>
+            <span class="total-price">$0</span>
+              <button class="purchase-btn">PURCHASE</button>
+        </div>
+      </div>
+    </div>
+<!--   end of cart modal -->
+
+<!--  products  -->
+<section class="ftco-section">
+  <div class="items-container pb-lg-5" >
+    <div class="card-1 card">
+      <img class="product-image" src="https://techsolutions.cc/wp-content/uploads/2018/11/Lan-Wan-Man-Network-Cables.jpg" alt="" >
+      <span class="product-info">LAN and WAN Solutions</span>
+        <button class="add-to-cart">Add to cart</button>
+          <span class="product-price">PHP 7000</span>
+    </div>
+
+    <div class="card-1 card" >
+
+      <h3 class="px-1 desc mt-3 text-dark text-center"  >Unlock Your Business’ Security
+
+
+      </h3>
+      <div class="py-5 px-4">
+        Fiber Optic Cables provide incredibly fast internet, high bandwidth levels, long distances, and other attractive features. It is not surprising that it is steadily increasing its market share. As a technological infrastructure, it is lightweight, thin as a strand of human hair, and has the ability to carry a large amount of digital information over long distances.
+      </div>
+    </div>
+  </div>
+</section>
+  <div class="items-container pb-lg-5" id="card2" >
+
+    <div class="card-2 card" >
+      <img class="product-image" src="https://assets-global.website-files.com/5b6df8bb681f89c158b48f6b/5ba6243aa410b78de3db190a_what-is-wireless-LAN.jpg" alt="" >
+      <span class="product-info" >Wireless Lan</span>
+      <button class="add-to-cart">Add to cart</button>
+        <span class="product-price">PHP 10000</span>
+    </div>
+
+
+    <div class="card-1 card">
+
+      <h3 class="px-1 desc mt-3 text-dark text-center">Unlock Your Business’ Security
+
+      </h3>
+      <div class="py-5 px-4">
+        We provide high-performance cabling solutions that adhere to established standards and practices, with highly trained experts especially in-tune with telecom. We take into account your individual requirements, including the infrastructure of your office space, the equipment and products you need.
+      </div>
+    </div>
+  </div>
+
+
+  <div class="items-container pb-lg-5" >
+
+    <div class="card-2 card" id="card3">
+      <img class="product-image" src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/outdoor-wifi-lead-1647263741.jpg" alt="">
+      <span class="product-info">Outdoor Wifi</span>
+      <button class="add-to-cart">Add to cart</button>
+        <span class="product-price">PHP 12000</span>
+    </div>
+
+
+    <div class="card-1 card">
+
+      <h3 class="px-1 desc mt-3 text-dark text-center">Unlock Your Business’ Security
+      </h3>
+      <div class="py-5 px-4">
+        We use only high-end quality products in our structured cabling systems, which are backed by manufacturer warranties. Our goal is to provide our customers with a physical layer infrastructure capable of supporting all applications designed in conjunction with today’s standards. By taking time to listen, study your business and understand your goals, Taylored Systems can install a complete voice and data cabling solution with service and support during and after the installation.
+      </div>
+    </div>
+  </div>
+
+
+  <div class="items-container pb-lg-5" >
+
+    <div class="card-2 card" id="card4">
+      <img class="product-image" src="https://www.travelers.com/iw-images/resources/Business/Large/NetworkSecurity_large.jpg" alt="">
+      <span class="product-info">Network Security</span>
+      <button class="add-to-cart">Add to cart</button>
+        <span class="product-price">PHP 11000</span>
+    </div>
+
+
+    <div class="card-1 card">
+
+      <h3 class="px-1 desc mt-3 text-dark text-center">Unlock Your Business’ Security
+
+      </h3>
+      <div class="py-5 px-4">
+        We use only high-end quality products in our structured cabling systems, which are backed by manufacturer warranties. Our goal is to provide our customers with a physical layer infrastructure capable of supporting all applications designed in conjunction with today’s standards. By taking time to listen, study your business and understand your goals, Taylored Systems can install a complete voice and data cabling solution with service and support during and after the installation.
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <div class="items-container pb-lg-5" >
+
+    <div class="card-2 card" id="card5">
+      <img class="product-image" src="https://www.cisco.com/c/en_ca/products/security/what-is-network-access-control-nac/jcr:content/Grid/subcategory_atl_8acc/layout-subcategory-atl/anchor_info_127c.img.png/1652078790135.png" alt="">
+      <span class="product-info">Network Access Control</span>
+      <button class="add-to-cart">Add to cart</button>
+        <span class="product-price">PHP 11000</span>
+    </div>
+
+
+    <div class="card-1 card">
+
+      <h3 class="px-1 desc mt-3 text-dark text-center">Unlock Your Business’ Security
+
+      </h3>
+      <div class="py-5 px-4">
+        We use only high-end quality products in our structured cabling systems, which are backed by manufacturer warranties. Our goal is to provide our customers with a physical layer infrastructure capable of supporting all applications designed in conjunction with today’s standards. By taking time to listen, study your business and understand your goals, Taylored Systems can install a complete voice and data cabling solution with service and support during and after the installation.
+      </div>
+    </div>
+  </div>
+<!--  end of products  -->
+
+
+<!-- Footer -->
+
+
+<div class="container-fluid footer">
+  <div class="container">
+    <footer class="py-5">
+      <div class="row">
+          <div class="col-md-4 offset-md-1 mb-3">
+            <img class="animate__bounce animate__infinite	infinite" src="https://skylake28.github.io/team7/img/logo.png"/>
+              <p>Knowledge acquired through many years of product development and improvement has resulted in our smart solutions.</p>
+
+            </div>
+        <div class="col-6 col-md-2 mb-3">
+          <h5>Quick Links</h5>
+          <hr id="line"/>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><i class="fa-solid fa-star"></i><a href="#" class="nav-link p-0 text-muted hvr-forward">Home</a></li>
+            <li class="nav-item mb-2"><i class="fa-solid fa-star"></i><a href="#" class="nav-link p-0 text-muted hvr-forward">About Us</a></li>
+            <li class="nav-item mb-2"><i class="fa-solid fa-star"></i><a href="#" class="nav-link p-0 text-muted hvr-forward">Services</a></li>
+            <li class="nav-item mb-2"><i class="fa-solid fa-star"></i><a href="#" class="nav-link p-0 text-muted hvr-forward">Shop</a></li>
+            <li class="nav-item mb-2"><i class="fa-solid fa-star"></i><a href="#" class="nav-link p-0 text-muted hvr-forward">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-md-2 mb-3">
+          <h5>Services</h5>
+          <hr id="line"/>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><i class="fa-solid fa-star"></i><a href="#" class="nav-link p-0 text-muted hvr-forward">Structured Cabling</a></li>
+            <li class="nav-item mb-2"><i class="fa-solid fa-star"></i><a href="#" class="nav-link p-0 text-muted hvr-forward">Security Systems</a></li>
+            <li class="nav-item mb-2"><i class="fa-solid fa-star"></i><a href="#" class="nav-link p-0 text-muted hvr-forward"> Phone System</a></li>
+            <li class="nav-item mb-2"><i class="fa-solid fa-star"></i><a href="#" class="nav-link p-0 text-muted hvr-forward"> Network Services</a></li>
+            <li class="nav-item mb-2"><i class="fa-solid fa-star"></i><a href="#" class="nav-link p-0 text-muted hvr-forward">Corporate Services</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-md-3 mb-3">
+          <h5>Contact Us</h5>
+          <hr id="line"/>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><i class="fa-solid fa-phone"></i><a href="#" class="nav-link p-0 text-muted hvr-forward"> +1-(000)-000-0000</a></li>
+            <li class="nav-item mb-2"><i class="fa-solid fa-mobile"></i><a href="#" class="nav-link p-0 text-muted hvr-forward">+1-(000)-000-0000</a></li>
+            <li class="nav-item mb-2"><i class="fa-solid fa-envelope"></i><a href="#" class="nav-link p-0 text-muted hvr-forward"> hello@switcheye.com </a></li>
+            <li class="nav-item mb-2"><i class="fa-solid fa-envelope"></i><a href="#" class="nav-link p-0 text-muted hvr-forward"> support@switcheye.com</a></li>
+            <li class="nav-item mb-2"><i class="fa-solid fa-location-dot"></i></i><a href="#" class="nav-link p-0 text-muted hvr-forward">Metro Manila, Philippines.</a></li>
+          </ul>
+        </div>
+
+
+      </div>
+
+      <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+        <p>&copy; 2022 Switch Eye, Inc. All rights reserved.</p>
+        <ul class="list-unstyled d-flex">
+          <li class="ms-3"><a class="link-dark" href="#">
+            <i class="fa-brands fa-square-facebook"></i>
+          </a>
+          </li>
+          <li class="ms-3"><a class="link-dark" href="#">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          </li>
+          <li class="ms-3"><a class="link-dark" href="#">
+            <i class="fa-brands fa-square-twitter"></i>
+          </a>
+          </li>
+          <li class="ms-3"><a class="link-dark" href="#">
+            <i class="fa-brands fa-square-google-plus"></i>
+          </a>
+          </li>
+          <li class="ms-3"><a class="link-dark" href="#">
+            <i class="fa-brands fa-square-pinterest"></i>
+          </a>
+          </li>
+
+        </ul>
+      </div>
+    </footer>
+  </div>
+  </div>
+        <!-- /Footer -->
+</body>
+</html>
+<!-- partial -->
+  <script  src="js/service.js"></script>
+
+
+
+<style>
+  * {
+  margin: 0;
+  padding: 0;
+  font-family: 'Rubik', sans-serif;
+}
+.ftco-section{
+  margin-top: 11em;
+}
+.dropdown:hover{
+  background-color: gray;
+
+}
+.dropdown-menu{
+  background-color: gray;
+}
+.dropdown-item:hover {
+  background-color: gray;
+}
+#nav-link {
+display: inline-block;
+position: relative;
+
+}
+
+#nav-link:after {
+content: '';
+position: absolute;
+width: 100%;
+transform: scaleX(0);
+height: 2px;
+bottom: 0;
+left: 0;
+background-color: gray;
+transform-origin: bottom right;
+transition: transform 0.30s ease-out;
+}
+
+#nav-link:hover:after {
+transform: scaleX(1);
+transform-origin: bottom left;
+}
+#buttons{
+  margin-right: 10px;
+  margin-top: 5px;
+}
+
+
+
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.cart-btn {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 2.5em;
+  margin-right: -3em;
+  color: white;
+}
+
+#cart {
+  position: relative;
+  font-size: 2rem;
+  cursor: pointer;
+  margin: 1em 4em 0 0;
+}
+
+.cart-quantity {
+  color: white;
+  background-color: red;
+  padding: .2em .3em;
+  position: absolute;
+  margin: .8em 7.5em 0 0;
+  right: 0;
+  border: solid 2px red;
+  border-radius: 15px;
+  font-weight: bolder;
+}
+
+.items-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+
+}
+
+.card {
+/*   width: 15rem; */
+  margin: 1em;
+  position: relative;
+  overflow: hidden;
+  text-align: center
+}
+
+.card:hover .add-to-cart {
+  transform: translateX(0);
+}
+
+.product-image {
+  margin-bottom: 1em;
+  width: 280px;
+  height: 288px;
+
+
+}
+
+.add-to-cart {
+  background-color: #051242;
+  color: white;
+  position: absolute;
+  right: 0;
+  top: 65%;
+  padding: .5em 1em;
+  transform: translateX(300px);
+  transition: .5s ease;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  font-weight: bolder;
+  font-size: 1.2rem
+}
+
+.product-price {
+  padding-top: 1em;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.cart-modal-overlay {
+  position: fixed;
+  width: 100vw;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .5);
+  z-index: 2;
+  transform: translateX(-200%);
+  transition: .5s ease-out;
+
+}
+
+.cart-modal {
+  height: 100vh;
+  width: 50%;
+  background-color: rgb(50,50,50);
+  float: right;
+  overflow: scroll;
+  overflow-x: hidden;
+
+
+}
+
+#close-btn {
+  font-size: 1.5rem;
+  float: right;
+  margin: .5em 2em 0 0;
+  color: white;
+  cursor: pointer;
+}
+
+.cart-is-empty {
+  color: white;
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 1em;
+  display: none;
+
+}
+
+.total {
+  text-align: center;
+  margin: 2em 0 2em 0;
+/*   display: none; */
+}
+
+.cart-total {
+  color: white;
+}
+
+.total-price {
+  color: white;
+  font-size: 2rem;
+  display: block;
+}
+
+.purchase-btn {
+  font-size: 1rem;
+  font-weight: bolder;
+  background-color: green;
+  color: white;
+  padding: 1em 2em;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  margin: 2em 0 1em 0;
+}
+
+.product-rows {
+  margin-top: 3em;
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.product-row {
+  display: flex;
+  align-items: center;
+}
+
+.cart-image {
+  width: 10rem;
+  margin: 1em;
+}
+
+.cart-price {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bolder;
+}
+
+.product-quantity {
+  width: 4rem;
+  font-size: 2rem;
+  margin-left: 3rem;
+}
+
+.remove-btn {
+  padding: 1em 2em;
+  background-color: red;
+  color: white;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  margin-left: 3rem;
+  font-weight: bolder;
+  font-size: 1rem;
+}
+
+.remove-btn:active {
+  transform: translateY(5px);
+}
+
+@media (max-width: 1000px){
+  .cart-modal {
+    width: 100vw;
+  }
+
+  .product-row {
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 2em;
+  }
+
+  .remove-btn {
+    margin: 0
+  }
+
+  .product-quantity {
+    margin: .5em 0 .5em 0
+  }
+}
+</style>
+</html>

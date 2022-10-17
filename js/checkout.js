@@ -1,3 +1,6 @@
+let buyerInfo = JSON.parse(localStorage.getItem('buyerInfo')) || []; //for current buyer
+
+
 const cardYear = document.querySelector('.exp_year');
 cardYear.innerHTML = `<option value="">Year</option>`;
 for (let i = 0; i < 30; i++) {
@@ -8,29 +11,21 @@ for (let i = 0; i < 30; i++) {
     cardYear.innerHTML += result;
 }  
 
-function numberWithCommas(x) {
-    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-}
-
 // console.log(productsCheckOut.length);
 const updateShoppingCartReview = function () {
-    productsCheckOut = JSON.parse(localStorage.getItem('paymentCard'))
     if (productsInCart.length > 0) {
-		let result = productsCheckOut.map(product2 => {
-            // console.log(product2.image);
-            // console.log(product2.name);
-            // console.log(product2.price);
+        productsCheckOut = JSON.parse(localStorage.getItem('paymentCard')) || [];
+		let result = productsCheckOut.map(product => {
 			// console.log('yes');
 			return `<div class="card d-flex flex-row border">
-                        <img class="img-responsive card-img p-1" src="${product2.image}"/>
+                        <img class="img-responsive card-img p-1" src="${product.image}"/>
                         <div class="card-body">
-                            <div class="">${product2.name}</div>
-                            <div class=""><small>Quantity: <span>${product2.count}</span></small></div>
-                            <h6><span>&#8369;</span>${numberWithCommas(product2.price)}</h6>
+                            <div class="">${product.name}</div>
+                            <div class=""><small>Quantity: <span>${product.count}</span></small></div>
+                            <h6><span>&#8369;</span>${numberWithCommas(product.price)}</h6>
                         </div>
                     </div>`
         });
-        // console.log(result);
         createCartHistory.innerHTML = result.join('') + 
             `<div class="form-group">
                 <div class="">
@@ -48,7 +43,12 @@ const updateShoppingCartReview = function () {
                     <strong>Order Total</strong>
                 <div class="pull-right"><span>&#8369;</span><span>${numberWithCommas(countTheSumPrice())}</span></div>
             </div>`;
+        }   
+        else {
+            document.querySelector('.checkout').classList.add('hidden');
         }
 }
+updateShoppingCartReview()
+updateShoppingCartHTML();
+updateProductsInPaymentStorage();
 
-updateShoppingCartReview();

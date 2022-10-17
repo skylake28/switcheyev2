@@ -3,6 +3,7 @@ if(!productsInCart){
 	productsInCart = [];
 }
 
+const createCartHistory = document.querySelector('.createCartHistory');
 const parentElementCart = document.querySelector('#buyItems');
 const cartSumItem = document.querySelector('.cartTotalinNav');
 const cartSumItem2 = document.querySelector('.totalitemsInsideModal');
@@ -20,7 +21,9 @@ const countTheSumPrice = () => { // 4
 }
  
 function numberWithCommas(x) {
-    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+
+    	return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+
 }
 
 
@@ -35,22 +38,36 @@ const updateShoppingCartHTML = function () {  // 3
 					<td class="align-middle text-center"><img src="${product.image}" class="img-modal"></td>
 					<td class="align-middle text-center cartProductDetails">
 						<h5>${product.name}</h5>
-						<h6>&#8369;<span>${numberWithCommas(product.price)}</span></h6>
-
-						<div class="align-middle text-center addRemoveProd">
-							<button class="btn btn-primary button-minus btn-sm" data-id=${product.id}>-</button>
-							<span class="countOfProduct">${product.count}</span>
-							<button class="btn btn-primary button-plus btn-sm" data-id=${product.id}>+</button>
-						</div>
-						
 					</td>
-					<td class="align-middle text-center"><button class="btn btn-danger removeSelectedCartItem" data-id=${product.id}>Remove</button></td>
+					<td class="align-middle text-center">
+						<p>&#8369;<span>${numberWithCommas(product.basePrice)}</span></p>
+					</td>
+
+					<td class="align-middle text-center">
+						<div class="container-sm d-flex justify-content-center text-center">
+
+							<button class="btn btn-primary button-minus btn-sm" data-id=${product.id}>-</button>
+							<span class="mx-2 countOfProduct">${product.count}</span>
+							<button class="btn btn-primary button-plus btn-sm" data-id=${product.id}>+</button>
+
+						</div>
+					<td class="align-middle text-center">
+						<h6>&#8369;<span>${numberWithCommas(product.price)}</span></h6>
+					</td>	
+
+					<td class="align-middle text-center"><button class="btn btn-danger btn-sm removeSelectedCartItem" data-id=${product.id}>
+						Remove</button>
+					</td>
 				</tr>`
 		});
-		parentElementCart.innerHTML =`<thead class="thead-light">
+
+		parentElementCart.innerHTML =`<thead class="table-primary text-center">
 										<tr>
 											<th>Product Image</th>
-											<th>Product Name/Price/Quantity</th>
+											<th>Product Name</th>
+											<th>Product Price</th>
+											<th>Product Quantity</th>
+											<th>Total Price</th>
 											<th>Remove from Cart</th>
 										</tr>
 									</thead>` + 
@@ -100,8 +117,9 @@ if (products != null ){
 		if (e.target.classList.contains('addToCart')) {
 			const productID = e.target.dataset.productId;
 			const productName = products.querySelector('.productName').innerHTML;
-			const productPrice = products.querySelector('.priceValue').innerHTML;
+			const productPrice = e.target.dataset.price;
 			const productImage = products.querySelector('img').src;
+			console.log(productPrice);
 			let product = {
 				name: productName,
 				image: productImage,
@@ -112,7 +130,7 @@ if (products != null ){
 			}
 			updateProductsInCart(product);
 			updateShoppingCartHTML();
-			updateShoppingCartReview();
+			updateProductsInPaymentStorage();
 		}
 	});
 }
@@ -138,7 +156,7 @@ if (parentElementCart != null){
 				}
 			}
 			updateShoppingCartHTML();
-			updateShoppingCartReview();
+			updateProductsInPaymentStorage();
 		}
 	});
 }
@@ -154,26 +172,21 @@ if (parentElementCart != null){
 				}
 			}
 			updateShoppingCartHTML();
-			updateShoppingCartReview();
+			updateProductsInPaymentStorage();
 		}
 	});
 }
 
-const createCartHistory = document.querySelector('.createCartHistory');
-let productsCheckOut = [];
-
 function updateProductsInPaymentStorage() { 
+	let productsCheckOut = [];
 	for(let i=0; i<localStorage.length; i++) {
 		let key = localStorage.key(i);
-		let dateObj = new Date();
-		let month = dateObj.getUTCMonth() + 1; //months from 1-12
-		let day = dateObj.getUTCDate();
-		let year = dateObj.getUTCFullYear();
-		newdate = year + "/" + month + "/" + day;
-		// console.log(newdate);
+		if (key === "shoppingCart"){
+			// console.log("okay");
 		productsCheckOut += localStorage.setItem('paymentCard', localStorage.getItem(key));
+		}
 	}
 }
 
-updateProductsInPaymentStorage();
 updateShoppingCartHTML();
+updateProductsInPaymentStorage();
