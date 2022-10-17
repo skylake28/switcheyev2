@@ -76,7 +76,7 @@ const updateShoppingCartHTML = function () {  // 3
 		document.querySelector('.checkout').classList.remove('hidden');
 		cartSumItem.innerHTML = countTotal(); //Displays total amount on div with class cart and p tag.
 		cartSumItem2.innerHTML = countTotal();
-		checkOuttTotalPrice.innerHTML = '<p>Total Price: <span id="totalPrices">&#8369;' + numberWithCommas(countTheSumPrice()) + '</span></p>';
+		checkOuttTotalPrice.innerHTML = '<p class="text-dark">Total Price: <span id="totalPrices">&#8369;' + numberWithCommas(countTheSumPrice()) + '</span></p>';
 		updateProductsInPaymentStorage();
 	}
 	else {
@@ -84,7 +84,12 @@ const updateShoppingCartHTML = function () {  // 3
 		parentElementCart.innerHTML = '<h4 class="empty">Your shopping cart is empty</h4>';
 		cartSumItem.innerHTML = '';
 		cartSumItem2.innerHTML = '';
-		checkOuttTotalPrice.innerHTML = '';
+		checkOutt
+		
+		
+		
+		
+		Price.innerHTML = '';
 	}
 }
 
