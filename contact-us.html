@@ -17,6 +17,44 @@
     <!-- /CDN LINKS -->
 </head>
 <body>
+   <!-- Modal -->
+   <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Cart</h5>
+          <p>Total Items: <span class="totalitemsInsideModal"></span></p>
+          <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="productsCart-container hide " id="productsCartContID">
+            <div class="producstOnCart table-responsive">
+                <table class="table table-bordered table-hover" id="buyItems">
+                    <!-- <thead>
+                      <th>Product Image</th>
+                      <th>Product Name/Price/Quantity</th>
+                      <th>Remove from Cart</th>
+                    </thead> -->
+                    <!-- <h4 class="empty">Your shopping cart is empty</h4> -->
+                    <!-- <li class="buyItem">
+                    </li> -->
+                </table>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <div id="totalPrices" class="ml-0">
+          </div>
+          <form action="" class="modalForm">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button formaction="checkout.html" type="submit" class="btn btn-primary checkout" >Checkout</button>
+          </form>
+        </div>
+      </div>
+    </div>
+</div>
     <!-- NAV BAR CODES-->
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container-fluid">
@@ -32,15 +70,10 @@
               <li class="nav-item">
                 <a class="nav-link hvr-underline-from-center" href="https://skylake28.github.io/switcheyev2/about-us.html">About Us</a>
               </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle hvr-underline-from-center" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <li class="nav-item">
+                <a class="nav-link hvr-underline-from-center" href="https://skylake28.github.io/switcheyev2/services.html">
                   Services
                 </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="https://skylake28.github.io/switcheyev2/servicedetails.html">Structured Cabling</a></li>
-                  <li><a class="dropdown-item" href="https://skylake28.github.io/switcheyev2/servicedetails2.html">Security System</a></li>
-                  <li><a class="dropdown-item" href="https://skylake28.github.io/switcheyev2/servicedetails3.html">Phone System</a></li>
-                </ul>
               </li>
 
               <li class="nav-item">
@@ -50,8 +83,8 @@
                 <a class="nav-link hvr-underline-from-center" href="https://skylake28.github.io/switcheyev2/contact-us.html">Contact Us</a>
               </li>
             </ul>
-            <button type="button" class="btn btn-primary btn-lg px-3 gap-3 me-5 py-3"> <i class="fa-solid fa-cart-shopping me-3"></i> Shopping Cart</button>
-          
+            <a href="" id="shoppingcart-btn" class="btn btn-primary ms-2 btn btn-primary btn-lg px-3 gap-3 me-5 py-3" data-bs-toggle="modal" data-bs-target="#exampleModalCenter"> <i class="fa-solid fa-cart-shopping"></i>  Shopping Cart <span class="cartTotalinNav text-dark"></span></a>
+            <p class="countitem"></p>
           </div>
         </div>
       </nav>
@@ -185,6 +218,7 @@
 </div>
 </div>
       <!-- /Footer -->
+       <script src="./js/cart.js"></script>
       <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="64bdfed1-d2a6-4e51-a30f-c1a98c1110ba";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 </body>
