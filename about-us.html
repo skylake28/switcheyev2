@@ -17,6 +17,44 @@
     <!-- /CDN LINKS -->
 </head>
 <body>
+   <!-- Modal -->
+   <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Cart</h5>
+          <p>Total Items: <span class="totalitemsInsideModal"></span></p>
+          <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="productsCart-container hide " id="productsCartContID">
+            <div class="producstOnCart table-responsive">
+                <table class="table table-bordered table-hover" id="buyItems">
+                    <!-- <thead>
+                      <th>Product Image</th>
+                      <th>Product Name/Price/Quantity</th>
+                      <th>Remove from Cart</th>
+                    </thead> -->
+                    <!-- <h4 class="empty">Your shopping cart is empty</h4> -->
+                    <!-- <li class="buyItem">
+                    </li> -->
+                </table>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <div id="totalPrices" class="ml-0">
+          </div>
+          <form action="" class="modalForm">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button formaction="checkout.html" type="submit" class="btn btn-primary checkout" >Checkout</button>
+          </form>
+        </div>
+      </div>
+    </div>
+</div>
     <!-- NAV BAR CODES-->
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container-fluid">
