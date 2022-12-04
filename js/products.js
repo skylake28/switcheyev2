@@ -908,14 +908,7 @@ const arrayProducts = () => {
                         
                     <a href="product-details.html?id=${element.id}"><img src="${element.images.imagesA}" class="img hover img-fluid" style="max-height: 250px"></a>
                     <h4>${element.name}</h4>
-                    <div class="rating">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star-o"></i>
-                    </div>
-                    <p>&#8369;${element.price}</p>
+                    <p class="text-dark">&#8369;${element.price}</p>
                     <div class="DetailbtnOverlay">
 
                         <a href="product-details.html?id=${element.id}" class="btn btn-primary" id="moreDetailbtn" data-product-id="${element.id}">Click for Details...</a>
@@ -973,7 +966,7 @@ const arraySelectedProducts = () => {
                         `</div>
                     </div>
                     <div class="col-sm-6">
-                        <p class="productName">${element.name}</p>
+                        <p class="productName text-dark">${element.name}</p>
                         <h1 id="prodname">${element.prodNameContent}</h1>
                         <h4>&#8369;<span class="priceValue">${numberWithCommas(element.price)}</span></h4>
                         
@@ -1015,14 +1008,8 @@ const arrayDetailedProducts = () => {
             let result2 = `<div class="col-sm-4 itemslisted">
                             <a href="product-details.html?id=${element2.id}"><img class="img hover img-fluid" src="${element2.images.imagesA}" style="max-height: 250px"></a>
                             <h4>${element2.name}</h4>
-                            <div class="rating">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star-o"></i>
-                            </div>
-                            <p>&#8369;${x}</p>
+
+                            <p class="text-dark">&#8369;${x}</p>
                             <div class="DetailbtnOverlay">
 
                             <a href="product-details.html?id=${element2.id}" class="btn btn-primary" id="moreDetailbtn" data-product-id="${element2.id}">Click for Details...</a>
