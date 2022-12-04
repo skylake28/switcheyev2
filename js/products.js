@@ -895,11 +895,16 @@ const parentElement2 = document.querySelector('.detailedProducts');//fro detaile
 const parentSelectedElement = document.querySelector('.selectedProduct');
 const productList = document.querySelector('.hikProduct')
 const nav = document.querySelector ('nav');
+const sortProd = document.querySelector('.sortItemList');
 
-const arrayProducts = () => {for (let i = 0; i < productsHickvision.length; i++) {
+const arrayProducts = () => {
+    // productsHickvision.sort(((x, y) => x - y));
+
+    console.log(productsHickvision.length);
+    for (let i = 0; i < productsHickvision.length; i++) {
     const element = productsHickvision[i];
     let x = numberWithCommas(element.price);
-    let result = `<div class="col-sm-4 itemslisted">
+    result = `<div class="col-sm-4 itemslisted">
                         
                     <a href="product-details.html?id=${element.id}"><img src="${element.images.imagesA}" class="img hover img-fluid" style="max-height: 250px"></a>
                     <h4>${element.name}</h4>
@@ -910,7 +915,7 @@ const arrayProducts = () => {for (let i = 0; i < productsHickvision.length; i++)
                         <i class="fa fa-star"></i>
                         <i class="fa fa-star-o"></i>
                     </div>
-                    <p>&#8369;${x}</p>
+                    <p>&#8369;${element.price}</p>
                     <div class="DetailbtnOverlay">
 
                         <a href="product-details.html?id=${element.id}" class="btn btn-primary" id="moreDetailbtn" data-product-id="${element.id}">Click for Details...</a>
@@ -926,6 +931,7 @@ const arrayProducts = () => {for (let i = 0; i < productsHickvision.length; i++)
     
 }
 
+
 const selectedproduct = () => {
     window.location.href;
     const params = new URLSearchParams(window.location.search);
@@ -935,6 +941,7 @@ const selectedproduct = () => {
 
 const arraySelectedProducts = () => {
     const product = selectedproduct();
+    
     for (let i = 0; i < productsHickvision.length; i++) {
     const element = productsHickvision[i];
     if (product==element.id) {
@@ -988,7 +995,6 @@ const arraySelectedProducts = () => {
         parentSelectedElement.innerHTML = result; 
         }
     };      
-     
 }
 
 
@@ -1041,16 +1047,22 @@ arrayDetailedProducts();
 arraySelectedProducts();
 
 
+
 //pagination
+
 const paginationNumbers = document.getElementById("pagination-numbers");
 const paginatedList = document.getElementById("list");
-const listItems = paginatedList.querySelectorAll(".itemslisted");
+let listItems = paginatedList.querySelectorAll(".itemslisted");
+if(!listItems){
+	listItems = [];
+}
 const nextButton = document.getElementById("next-button");
 const prevButton = document.getElementById("prev-button");
 
-console.log(listItems.length);
 const paginationLimit = 9;
 const pageCount = Math.ceil(listItems.length / paginationLimit);
+
+
 
 const appendPageNumber = (index) => {
     const pageNumber = document.createElement("span");
@@ -1066,79 +1078,118 @@ const appendPageNumber = (index) => {
     for (let i = 1; i <= pageCount; i++) {
       appendPageNumber(i);
     }
-  };
+};
 
-  window.addEventListener("load", () => {
-    getPaginationNumbers();
-    setCurrentPage(1);
-   
-    prevButton.addEventListener("click", () => {
-      setCurrentPage(currentPage - 1);
-    });
-   
-    nextButton.addEventListener("click", () => {
-      setCurrentPage(currentPage + 1);
-    });
-   
-    document.querySelectorAll(".pagination-number").forEach((button) => {
-      const pageIndex = Number(button.getAttribute("page-index"));
-   
-      if (pageIndex) {
-        button.addEventListener("click", () => {
-          setCurrentPage(pageIndex);
-        });
-      }
-    });
-  });
 
-  const handleActivePageNumber = () => {
-    document.querySelectorAll(".pagination-number").forEach((span) => {
-      span.classList.remove("active");
-       
-      const pageIndex = Number(span.getAttribute("page-index"));
-      if (pageIndex == currentPage) {
-        span.classList.add("active");
-      }
-    });
-  };
 
-  const disableButton = (button) => {
-    button.classList.add("disabled");
-    button.setAttribute("disabled", true);
-  };
-   
-  const enableButton = (button) => {
-    button.classList.remove("disabled");
-    button.removeAttribute("disabled");
-  };
-   
-  const handlePageButtonsStatus = () => {
-    if (currentPage == 1) {
-      disableButton(prevButton);
-    } else {
-      enableButton(prevButton);
+const handleActivePageNumber = () => {
+document.querySelectorAll(".pagination-number").forEach((span) => {
+    span.classList.remove("active");
+    
+    const pageIndex = Number(span.getAttribute("page-index"));
+    if (pageIndex == currentPage) {
+    span.classList.add("active");
     }
-   
-    if (pageCount == currentPage) {
-      disableButton(nextButton);
-    } else {
-      enableButton(nextButton);
-    }
-  };
+});
+};
 
-  const setCurrentPage = (pageNum) => {
-    currentPage = pageNum;
-   
+const disableButton = (button) => {
+button.classList.add("disabled");
+button.setAttribute("disabled", true);
+};
+
+const enableButton = (button) => {
+button.classList.remove("disabled");
+button.removeAttribute("disabled");
+};
+
+const handlePageButtonsStatus = () => {
+if (currentPage == 1) {
+    disableButton(prevButton);
+} else {
+    enableButton(prevButton);
+}
+
+if (pageCount == currentPage) {
+    disableButton(nextButton);
+} else {
+    enableButton(nextButton);
+}
+};
+
+const setCurrentPage = (pageNum) => {
+currentPage = pageNum;
+
+handleActivePageNumber();
+handlePageButtonsStatus();
+addRemHid(pageNum)
+
+};
+
+const addRemHid = (currentPage) => {
+        
+    const prevRange = (currentPage - 1) * paginationLimit;
+    const currRange = currentPage * paginationLimit;
+    listItems = paginatedList.querySelectorAll(".itemslisted");
+    listItems.forEach((item, index) => {
+        item.classList.add("hidden");
+        if (index >= prevRange && index < currRange) {
+        item.classList.remove("hidden");
+        }
+    });
+};
+
+sortProd.addEventListener("change", (e) => {
+    let newArray = []
+    let listItems = "";
+    if (e.target.value == 'default') {
+        location.reload();
+    } else if (e.target.value == 'hPrice') {
+        productsHickvision.sort(((x, y) => y.price - x.price));
+        newArray = new Object(productsHickvision);
+    } else if (e.target.value == 'lPrice') {
+        productsHickvision.sort(((x, y) => x.price - y.price));
+        newArray = new Object(productsHickvision);
+
+    }
+    parentElement.innerHTML  = "";
+    let result = "";
+    arrayProducts();
     handleActivePageNumber();
     handlePageButtonsStatus();
+
+    addRemHid(currentPage)
+    return currentPage;
+})
+
+const pageChange = () => {
+
+    prevButton.addEventListener("click", () => {
+        setCurrentPage(currentPage - 1);
+        console.log(currentPage);
+      });
      
-    const prevRange = (pageNum - 1) * paginationLimit;
-    const currRange = pageNum * paginationLimit;
-   
-    listItems.forEach((item, index) => {
-      item.classList.add("hidden");
-      if (index >= prevRange && index < currRange) {
-        item.classList.remove("hidden");
-      }
-    });
-  };
+      nextButton.addEventListener("click", () => {
+        setCurrentPage(currentPage + 1);
+        // console.log(currentPage + 1);
+      });
+     
+      document.querySelectorAll(".pagination-number").forEach((button) => {
+        const pageIndex = Number(button.getAttribute("page-index"));
+     
+        if (pageIndex) {
+          button.addEventListener("click", () => {
+            setCurrentPage(pageIndex);
+          });
+        }
+      });
+
+}
+
+
+window.addEventListener("load", () => {
+    getPaginationNumbers();
+    setCurrentPage(1);
+    pageChange();
+
+  });
