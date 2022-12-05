@@ -9,7 +9,7 @@
   padding-top: 175px;
 }
 .navbar{
-    min-height: 150px;
+    min-height: 150px !important;
     background-color: #051242;
     color: #fff;
 }
@@ -74,6 +74,10 @@
 
 .footer i{
   margin-right:5px;
+}
+.footer h5{
+  color: #fff !important;
+  size: 1.25rem !important;
 }
 #line {
   border: 1px solid #49B6FF;
